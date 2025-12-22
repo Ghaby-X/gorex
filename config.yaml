@@ -1,0 +1,20 @@
+provider:
+  name: "metatrader5"
+  type: "candle"
+  timeframe: "30m"
+
+executor:
+  name: "metatrader5"
+
+assets:
+  - symbol: "EURUSD"
+    strategy:
+      name: "ma_crossover"
+      params:
+        slow_period: 100
+        fast_period: 10
+    risk:
+      take_profit_pips: 50
+      stop_loss_pips: 30
+      lot_size: 10000
+      leverage: 100
